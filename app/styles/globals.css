@@ -1,0 +1,207 @@
+/* Variables de CSS */
+:root {
+    --max-width: 1100px;
+    --border-radius: 12px;
+    --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+      "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+      "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  
+    --foreground-color: #000000; /* Color de la letra global en negro */
+    --background-color: #ffffff; /* Fondo blanco */
+  
+    --primary-glow: conic-gradient(
+      from 180deg at 50% 50%,
+      #16abff33 0deg,
+      #0885ff33 55deg,
+      #54d6ff33 120deg,
+      #0071ff33 160deg,
+      transparent 360deg
+    );
+    --secondary-glow: radial-gradient(
+      rgba(255, 255, 255, 1),
+      rgb(255, 255, 255)
+    );
+  
+    --tile-start-rgb: 239, 245, 249;
+    --tile-end-rgb: 228, 232, 233;
+    --tile-border: conic-gradient(
+      #00000080,
+      #00000040,
+      #00000030,
+      #00000020,
+      #00000010,
+      #00000010,
+      #00000080
+    );
+  
+    --callout-rgb: 238, 240, 241;
+    --callout-border-rgb: 172, 175, 176;
+    --card-rgb: 180, 185, 188;
+    --card-border-rgb: 131, 134, 135;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-color: #ffffff; /* Color de la letra en blanco para el modo oscuro */
+      --background-color: #000000; /* Fondo negro para el modo oscuro */
+  
+      --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+      --secondary-glow: linear-gradient(
+        to bottom right,
+        rgba(1, 65, 255, 0),
+        rgba(1, 65, 255, 0),
+        rgba(1, 65, 255, 0.3)
+      );
+  
+      --tile-start-rgb: 2, 13, 46;
+      --tile-end-rgb: 2, 5, 19;
+      --tile-border: conic-gradient(
+        #ffffff80,
+        #ffffff40,
+        #ffffff30,
+        #ffffff20,
+        #ffffff10,
+        #ffffff10,
+        #ffffff80
+      );
+  
+      --callout-rgb: 20, 20, 20;
+      --callout-border-rgb: 108, 108, 108;
+      --card-rgb: 100, 100, 100;
+      --card-border-rgb: 200, 200, 200;
+    }
+  }
+  
+  /* Reset some default browser styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Set a base font-family for the entire application */
+  body {
+    color: var(--foreground-color); /* Color de la letra global */
+    background-color: var(--background-color); /* Fondo blanco */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    line-height: 1.6;
+  }
+  
+  /* Add some basic padding to the main container */
+  .container {
+    padding: 20px;
+  }
+  
+  /* Styles for the list of animals */
+  .animal-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .animal-list .list-group-item {
+    margin-bottom: 15px;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    background-color: #1f93bd4e; /* Fondo blanco */
+  }
+  
+  /* Styles for animal information */
+  .info-animal {
+    margin-bottom: 15px;
+  }
+  
+  .info-animal p {
+    margin: 0 0 10px;
+  }
+  
+  .info-animal .fw-bold {
+    font-weight: bold;
+  }
+  
+  .info-animal .fw-normal {
+    font-weight: normal;
+  }
+  
+  /* Button styles */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 0.25rem;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .btn i {
+    margin-right: 5px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    border: 1px solid #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: 1px solid #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
+  
+  .btn-azul {
+    background-color: #007bff;
+    color: #ffffff;
+    border: 1px solid #007bff;
+  }
+  
+  .btn-azul:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+  }
+  
+  .btn-rojo {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: 1px solid #dc3545;
+  }
+  
+  .btn-rojo:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
+  
+  .acciones {
+    display: flex;
+    gap: 10px;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
+    }
+  }
+  
